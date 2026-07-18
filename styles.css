@@ -177,35 +177,54 @@ ul {
 
 /* ENLACES PROFESIONALES EN LA PORTADA */
 
-.hero-social-links {
-    display: flex;
-    flex-wrap: wrap;
+.hero-contact-links {
+    display: grid;
+    grid-template-columns: repeat(4, max-content);
     gap: 12px;
     margin-top: 22px;
 }
 
-.hero-social-links a {
+.hero-contact-button {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    min-width: 105px;
-    min-height: 46px;
-    padding: 0 20px;
+    gap: 10px;
+    min-height: 48px;
+    padding: 0 17px;
     border: 1px solid var(--border);
     border-radius: 10px;
     background: rgba(255, 255, 255, 0.025);
     color: var(--text);
+    font-size: 0.92rem;
     font-weight: 700;
+    white-space: nowrap;
     transition:
         transform 0.2s ease,
         border-color 0.2s ease,
-        background 0.2s ease;
+        background 0.2s ease,
+        box-shadow 0.2s ease;
 }
 
-.hero-social-links a:hover {
+.hero-contact-button:hover {
     transform: translateY(-3px);
     border-color: var(--accent);
-    background: var(--card);
+    background: rgba(117, 89, 255, 0.12);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.22);
+}
+
+.hero-contact-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    flex-shrink: 0;
+    border-radius: 7px;
+    background: rgba(117, 89, 255, 0.16);
+    color: var(--accent-light);
+    font-size: 0.77rem;
+    font-weight: 900;
+    line-height: 1;
 }
 
 /* TARJETA DE ESPECIALIDADES */
@@ -490,6 +509,13 @@ ul {
 
 /* TABLET */
 
+@media (max-width: 1050px) {
+
+    .hero-contact-links {
+        grid-template-columns: repeat(2, max-content);
+    }
+}
+
 @media (max-width: 900px) {
 
     .nav-links {
@@ -548,14 +574,19 @@ ul {
         width: 100%;
     }
 
-    .hero-social-links {
-        display: grid;
+    .hero-contact-links {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .hero-social-links a {
+    .hero-contact-button {
         width: 100%;
         min-width: 0;
+        padding: 0 10px;
+    }
+
+    .hero-contact-icon {
+        width: 26px;
+        height: 26px;
     }
 
     .contact-links {
