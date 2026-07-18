@@ -46,6 +46,10 @@ a {
     text-decoration: none;
 }
 
+button {
+    font: inherit;
+}
+
 ul {
     padding-left: 20px;
 }
@@ -126,7 +130,6 @@ ul {
 
 .hero-description {
     max-width: 720px;
-    margin-top: 0;
     color: var(--text-secondary);
     font-size: 1.15rem;
 }
@@ -151,7 +154,6 @@ ul {
     color: var(--text);
     font-size: 1rem;
     font-weight: 700;
-    text-decoration: none;
     transition:
         transform 0.2s ease,
         background 0.2s ease,
@@ -388,6 +390,166 @@ ul {
     color: white;
 }
 
+/* CARRUSEL MULTIMEDIA */
+
+.project-slider {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    outline: none;
+    background: var(--background-light);
+}
+
+.project-slider:focus-visible {
+    outline: 2px solid var(--accent-light);
+    outline-offset: -2px;
+}
+
+.project-slides {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.project-slide {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(100%);
+    transition:
+        transform 0.45s ease,
+        opacity 0.45s ease,
+        visibility 0.45s ease;
+}
+
+.project-slide.active {
+    z-index: 2;
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+}
+
+.project-slide.slide-to-left {
+    z-index: 1;
+    opacity: 0;
+    visibility: visible;
+    transform: translateX(-100%);
+}
+
+.project-slide.slide-to-right {
+    z-index: 1;
+    opacity: 0;
+    visibility: visible;
+    transform: translateX(100%);
+}
+
+.project-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* FLECHAS DEL CARRUSEL */
+
+.slider-arrow {
+    position: absolute;
+    top: 50%;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 46px;
+    height: 46px;
+    padding: 0;
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    border-radius: 50%;
+    background: rgba(7, 10, 18, 0.72);
+    color: white;
+    font-size: 1.4rem;
+    cursor: pointer;
+    opacity: 0;
+    transform: translateY(-50%);
+    backdrop-filter: blur(8px);
+    transition:
+        opacity 0.2s ease,
+        background 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.slider-arrow-left {
+    left: 16px;
+}
+
+.slider-arrow-right {
+    right: 16px;
+}
+
+.project-slider:hover .slider-arrow,
+.project-slider:focus-within .slider-arrow,
+.slider-arrow:focus-visible {
+    opacity: 1;
+}
+
+.slider-arrow:hover {
+    border-color: var(--accent-light);
+    background: rgba(117, 89, 255, 0.88);
+}
+
+.slider-arrow-left:hover {
+    transform: translateY(-50%) translateX(-2px);
+}
+
+.slider-arrow-right:hover {
+    transform: translateY(-50%) translateX(2px);
+}
+
+/* INDICADORES DEL CARRUSEL */
+
+.slider-indicators {
+    position: absolute;
+    bottom: 14px;
+    left: 50%;
+    z-index: 6;
+    display: flex;
+    gap: 8px;
+    padding: 7px 10px;
+    border-radius: 999px;
+    background: rgba(7, 10, 18, 0.66);
+    transform: translateX(-50%);
+    backdrop-filter: blur(8px);
+}
+
+.slider-indicator {
+    width: 9px;
+    height: 9px;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+    transition:
+        width 0.2s ease,
+        background 0.2s ease;
+}
+
+.slider-indicator.active {
+    width: 24px;
+    border-radius: 999px;
+    background: var(--accent-light);
+}
+
+.slider-indicator:focus-visible,
+.slider-arrow:focus-visible {
+    outline: 2px solid white;
+    outline-offset: 3px;
+}
+
 /* ACERCA DE MÍ */
 
 .about-content {
@@ -541,6 +703,10 @@ ul {
     .blog-grid {
         grid-template-columns: 1fr;
     }
+
+    .slider-arrow {
+        opacity: 1;
+    }
 }
 
 /* CELULAR */
@@ -589,6 +755,24 @@ ul {
     .social-icon {
         width: 26px;
         height: 26px;
+    }
+
+    .slider-arrow {
+        width: 40px;
+        height: 40px;
+        opacity: 1;
+    }
+
+    .slider-arrow-left {
+        left: 10px;
+    }
+
+    .slider-arrow-right {
+        right: 10px;
+    }
+
+    .slider-indicators {
+        bottom: 10px;
     }
 
     .contact-links {
