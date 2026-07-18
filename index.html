@@ -189,10 +189,102 @@
 
                 <article class="project-card">
 
-                    <img
-                        src="projects/inflation-paradox/cover.png"
-                        alt="Portada del proyecto Inflation Paradox"
+                    <div
+                        class="project-slider"
+                        data-project-slider
+                        tabindex="0"
+                        aria-label="Galería multimedia de Inflation Paradox"
                     >
+
+                        <div class="project-slides">
+
+                            <div class="project-slide active">
+                                <img
+                                    src="projects/inflation-paradox/convex.png"
+                                    alt="Portada de Inflation Paradox"
+                                >
+                            </div>
+
+                            <div class="project-slide">
+                                <img
+                                    src="projects/inflation-paradox/gameplay-1.gif"
+                                    alt="Gameplay de Inflation Paradox, escena 1"
+                                    loading="lazy"
+                                >
+                            </div>
+
+                            <div class="project-slide">
+                                <img
+                                    src="projects/inflation-paradox/gameplay-2.gif"
+                                    alt="Gameplay de Inflation Paradox, escena 2"
+                                    loading="lazy"
+                                >
+                            </div>
+
+                            <div class="project-slide">
+                                <img
+                                    src="projects/inflation-paradox/gameplay-3.gif"
+                                    alt="Gameplay de Inflation Paradox, escena 3"
+                                    loading="lazy"
+                                >
+                            </div>
+
+                        </div>
+
+                        <button
+                            class="slider-arrow slider-arrow-left"
+                            type="button"
+                            data-slider-previous
+                            aria-label="Mostrar contenido anterior"
+                        >
+                            &#10094;
+                        </button>
+
+                        <button
+                            class="slider-arrow slider-arrow-right"
+                            type="button"
+                            data-slider-next
+                            aria-label="Mostrar contenido siguiente"
+                        >
+                            &#10095;
+                        </button>
+
+                        <div
+                            class="slider-indicators"
+                            aria-label="Seleccionar contenido de la galería"
+                        >
+
+                            <button
+                                class="slider-indicator active"
+                                type="button"
+                                data-slide-index="0"
+                                aria-label="Mostrar portada"
+                            ></button>
+
+                            <button
+                                class="slider-indicator"
+                                type="button"
+                                data-slide-index="1"
+                                aria-label="Mostrar gameplay 1"
+                            ></button>
+
+                            <button
+                                class="slider-indicator"
+                                type="button"
+                                data-slide-index="2"
+                                aria-label="Mostrar gameplay 2"
+                            ></button>
+
+                            <button
+                                class="slider-indicator"
+                                type="button"
+                                data-slide-index="3"
+                                aria-label="Mostrar gameplay 3"
+                            ></button>
+
+                        </div>
+
+                    </div>
 
                     <div class="project-content">
 
