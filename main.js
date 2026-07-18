@@ -1,11 +1,11 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const links = document.querySelectorAll('a[href^="#"]');
+    const internalLinks = document.querySelectorAll('a[href^="#"]');
 
-    links.forEach((link) => {
+    internalLinks.forEach((link) => {
         link.addEventListener("click", (event) => {
             const targetId = link.getAttribute("href");
 
-            if (targetId === "#") {
+            if (!targetId || targetId === "#") {
                 return;
             }
 
