@@ -119,13 +119,14 @@ ul {
 }
 
 .hero h2 {
-    margin-bottom: 24px;
+    margin-bottom: 0;
     color: var(--accent-light);
     font-size: clamp(1.4rem, 3vw, 2.2rem);
 }
 
 .hero-description {
     max-width: 720px;
+    margin-top: 0;
     color: var(--text-secondary);
     font-size: 1.15rem;
 }
@@ -188,7 +189,8 @@ ul {
     display: flex;
     flex-wrap: wrap;
     gap: 12px;
-    margin-top: 20px;
+    margin-top: 18px;
+    margin-bottom: 28px;
 }
 
 .hero-contact-links .social-button {
