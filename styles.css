@@ -36,7 +36,8 @@ body {
     line-height: 1.6;
 }
 
-img {
+img,
+video {
     display: block;
     max-width: 100%;
 }
@@ -430,9 +431,11 @@ ul {
     transform: translateX(0);
 }
 
-.project-slide img {
+.project-slide img,
+.project-slide video {
     width: 100%;
     height: 100%;
+    background: var(--background-light);
     object-fit: cover;
 }
 
@@ -480,6 +483,12 @@ ul {
 .slider-arrow:hover {
     border-color: var(--accent-light);
     background: rgba(117, 89, 255, 0.9);
+}
+
+.slider-arrow:focus-visible,
+.slider-indicator:focus-visible {
+    outline: 2px solid white;
+    outline-offset: 3px;
 }
 
 /* INDICADORES */
