@@ -15,7 +15,7 @@
 
     <title>Hamid Riba | Unity Game Developer</title>
 
-    <link rel="stylesheet" href="styles.css?v=8">
+    <link rel="stylesheet" href="styles.css?v=9">
 </head>
 
 <body>
@@ -660,10 +660,129 @@
 
                 <article class="project-card">
 
-                    <img
-                        src="projects/mixer-doctor/cover.png"
-                        alt="Portada del videojuego Mixer Doctor"
+                    <div
+                        class="project-slider"
+                        data-project-slider
+                        tabindex="0"
+                        aria-label="Galería multimedia de Mixer Doctor"
                     >
+
+                        <div class="project-slides">
+
+                            <div class="project-slide active">
+                                <img
+                                    src="projects/mixer-doctor/cover.png"
+                                    alt="Portada del videojuego Mixer Doctor"
+                                >
+                            </div>
+
+                            <div class="project-slide">
+                                <video
+                                    muted
+                                    loop
+                                    playsinline
+                                    preload="metadata"
+                                    aria-label="Gameplay de Mixer Doctor, escena 1"
+                                >
+                                    <source
+                                        src="projects/mixer-doctor/gameplay-1.mp4"
+                                        type="video/mp4"
+                                    >
+
+                                    Tu navegador no puede reproducir este video.
+                                </video>
+                            </div>
+
+                            <div class="project-slide">
+                                <video
+                                    muted
+                                    loop
+                                    playsinline
+                                    preload="metadata"
+                                    aria-label="Gameplay de Mixer Doctor, escena 2"
+                                >
+                                    <source
+                                        src="projects/mixer-doctor/gameplay-2.mp4"
+                                        type="video/mp4"
+                                    >
+
+                                    Tu navegador no puede reproducir este video.
+                                </video>
+                            </div>
+
+                            <div class="project-slide">
+                                <video
+                                    muted
+                                    loop
+                                    playsinline
+                                    preload="metadata"
+                                    aria-label="Gameplay de Mixer Doctor, escena 3"
+                                >
+                                    <source
+                                        src="projects/mixer-doctor/gameplay-3.mp4"
+                                        type="video/mp4"
+                                    >
+
+                                    Tu navegador no puede reproducir este video.
+                                </video>
+                            </div>
+
+                        </div>
+
+                        <button
+                            class="slider-arrow slider-arrow-left"
+                            type="button"
+                            data-slider-previous
+                            aria-label="Mostrar contenido anterior de Mixer Doctor"
+                        >
+                            &#10094;
+                        </button>
+
+                        <button
+                            class="slider-arrow slider-arrow-right"
+                            type="button"
+                            data-slider-next
+                            aria-label="Mostrar contenido siguiente de Mixer Doctor"
+                        >
+                            &#10095;
+                        </button>
+
+                        <div
+                            class="slider-indicators"
+                            aria-label="Seleccionar contenido de Mixer Doctor"
+                        >
+
+                            <button
+                                class="slider-indicator active"
+                                type="button"
+                                data-slide-index="0"
+                                aria-label="Mostrar portada de Mixer Doctor"
+                            ></button>
+
+                            <button
+                                class="slider-indicator"
+                                type="button"
+                                data-slide-index="1"
+                                aria-label="Mostrar gameplay 1 de Mixer Doctor"
+                            ></button>
+
+                            <button
+                                class="slider-indicator"
+                                type="button"
+                                data-slide-index="2"
+                                aria-label="Mostrar gameplay 2 de Mixer Doctor"
+                            ></button>
+
+                            <button
+                                class="slider-indicator"
+                                type="button"
+                                data-slide-index="3"
+                                aria-label="Mostrar gameplay 3 de Mixer Doctor"
+                            ></button>
+
+                        </div>
+
+                    </div>
 
                     <div class="project-content">
 
@@ -1124,7 +1243,7 @@
 
     </footer>
 
-    <script src="main.js?v=8"></script>
+    <script src="main.js?v=9"></script>
 
 </body>
 </html>
