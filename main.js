@@ -63,20 +63,24 @@ function initializeProjectSliders() {
         let currentIndex = 0;
         let animationInProgress = false;
 
+        function resetVideo(video) {
+            video.pause();
+
+            try {
+                video.currentTime = 0;
+            } catch (error) {
+                console.log(
+                    "El video todavía no está listo para reiniciarse."
+                );
+            }
+        }
+
         function pauseSliderVideos() {
             slides.forEach((slide) => {
                 const video = slide.querySelector("video");
 
                 if (video) {
-                    video.pause();
-
-                    try {
-                        video.currentTime = 0;
-                    } catch (error) {
-                        console.log(
-                            "El video todavía no está listo para reiniciarse."
-                        );
-                    }
+                    resetVideo(video);
                 }
             });
         }
