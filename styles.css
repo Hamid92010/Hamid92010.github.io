@@ -316,13 +316,6 @@ ul {
     background: var(--card-hover);
 }
 
-.project-card > img {
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    background: var(--background-light);
-    object-fit: cover;
-}
-
 .project-content {
     padding: 28px;
 }
