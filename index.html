@@ -15,7 +15,7 @@
 
     <title>Hamid Riba | Unity Game Developer</title>
 
-    <link rel="stylesheet" href="styles.css?v=7">
+    <link rel="stylesheet" href="styles.css?v=8">
 </head>
 
 <body>
@@ -61,8 +61,6 @@
                 <h2>
                     Gameplay, UI y experiencias XR
                 </h2>
-
-                <!-- ENLACES PROFESIONALES -->
 
                 <div class="hero-contact-links">
 
@@ -135,8 +133,6 @@
                 </div>
 
             </div>
-
-            <!-- ESPECIALIDADES -->
 
             <div class="hero-card">
 
@@ -513,10 +509,105 @@
 
                 <article class="project-card">
 
-                    <img
-                        src="projects/wobble-heads/cover.png"
-                        alt="Portada del videojuego Wobble Heads"
+                    <div
+                        class="project-slider"
+                        data-project-slider
+                        tabindex="0"
+                        aria-label="Galería multimedia de Wobble Heads"
                     >
+
+                        <div class="project-slides">
+
+                            <div class="project-slide active">
+                                <img
+                                    src="projects/wobble-heads/cover.png"
+                                    alt="Portada del videojuego Wobble Heads"
+                                >
+                            </div>
+
+                            <div class="project-slide">
+                                <video
+                                    muted
+                                    loop
+                                    playsinline
+                                    preload="metadata"
+                                    aria-label="Gameplay de Wobble Heads, escena 1"
+                                >
+                                    <source
+                                        src="projects/wobble-heads/gameplay-1.mp4"
+                                        type="video/mp4"
+                                    >
+
+                                    Tu navegador no puede reproducir este video.
+                                </video>
+                            </div>
+
+                            <div class="project-slide">
+                                <video
+                                    muted
+                                    loop
+                                    playsinline
+                                    preload="metadata"
+                                    aria-label="Gameplay de Wobble Heads, escena 2"
+                                >
+                                    <source
+                                        src="projects/wobble-heads/gameplay-2.mp4"
+                                        type="video/mp4"
+                                    >
+
+                                    Tu navegador no puede reproducir este video.
+                                </video>
+                            </div>
+
+                        </div>
+
+                        <button
+                            class="slider-arrow slider-arrow-left"
+                            type="button"
+                            data-slider-previous
+                            aria-label="Mostrar contenido anterior de Wobble Heads"
+                        >
+                            &#10094;
+                        </button>
+
+                        <button
+                            class="slider-arrow slider-arrow-right"
+                            type="button"
+                            data-slider-next
+                            aria-label="Mostrar contenido siguiente de Wobble Heads"
+                        >
+                            &#10095;
+                        </button>
+
+                        <div
+                            class="slider-indicators"
+                            aria-label="Seleccionar contenido de Wobble Heads"
+                        >
+
+                            <button
+                                class="slider-indicator active"
+                                type="button"
+                                data-slide-index="0"
+                                aria-label="Mostrar portada de Wobble Heads"
+                            ></button>
+
+                            <button
+                                class="slider-indicator"
+                                type="button"
+                                data-slide-index="1"
+                                aria-label="Mostrar gameplay 1 de Wobble Heads"
+                            ></button>
+
+                            <button
+                                class="slider-indicator"
+                                type="button"
+                                data-slide-index="2"
+                                aria-label="Mostrar gameplay 2 de Wobble Heads"
+                            ></button>
+
+                        </div>
+
+                    </div>
 
                     <div class="project-content">
 
@@ -1033,7 +1124,7 @@
 
     </footer>
 
-    <script src="main.js?v=7"></script>
+    <script src="main.js?v=8"></script>
 
 </body>
 </html>
