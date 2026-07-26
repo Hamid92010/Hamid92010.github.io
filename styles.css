@@ -391,7 +391,7 @@ ul {
     color: white;
 }
 
-/* CARRUSEL */
+/* CARRUSELES */
 
 .project-slider {
     position: relative;
@@ -483,6 +483,14 @@ ul {
 .slider-arrow:hover {
     border-color: var(--accent-light);
     background: rgba(117, 89, 255, 0.9);
+}
+
+.slider-arrow-left:hover {
+    transform: translateY(-50%) translateX(-2px);
+}
+
+.slider-arrow-right:hover {
+    transform: translateY(-50%) translateX(2px);
 }
 
 .slider-arrow:focus-visible,
